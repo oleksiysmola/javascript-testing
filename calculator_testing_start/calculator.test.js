@@ -37,10 +37,32 @@ describe('sum', () => {
 });
 
 describe('subtract', () => {
+  test("can subtract two small positive numbers", () => {
+    expected = -1;
+    actual = subtract(2, 3);
+    expect(actual).toBe(expected);
+  })
+
+  test("can subtract negative numbers", () => {
+    expected = 5;
+    actual = subtract(2, -3);
+    expect(actual).toBe(expected);
+  })
 
 });
 
 describe('multiply', () => {
+  test("can multiply two positive numbers", () => {
+    expected = 6;
+    actual = multiply(2, 3);
+    expect(actual).toBe(expected);
+  })
+
+  test("can multiply two negative numbers", () => {
+    expected = 6;
+    actual = multiply(-2, -3);
+    expect(actual).toBe(expected);
+  })
 
 });
 
