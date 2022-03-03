@@ -80,23 +80,45 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+
   test("finding the modulus of two positive numbers", () => {
     expected = 0;
     actual = modulus(1000, 2);
     expect(actual).toBe(expected);
   })
+
   test("finding a a non-zero modulus", () => {
     expected = 1;
     actual = modulus(10, 3);
     expect(actual).toBe(expected);
   })
+
 });
 
 describe('even', () => {
-
+test("returns true when given even number", () => {
+    expected = true;
+    actual = even(10);
+    expect(actual).toBe(expected);
+  })
   
+  test("returns false when given odd number", () => {
+    expected = false;
+    actual = even(9);
+    expect(actual).toBe(expected);
+  })
 });
 
 describe('odd', () => {
-
+  test("returns true when given odd number", () => {
+    expected = true;
+    actual = odd(9);
+    expect(actual).toBe(expected);
+  })
+  
+  test("returns false when given even number", () => {
+    expected = false;
+    actual = odd(10);
+    expect(actual).toBe(expected);
+  })
 });
