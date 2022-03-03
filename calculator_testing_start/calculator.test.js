@@ -109,6 +109,12 @@ describe('modulus', () => {
     expect(actual).toBe(expected);
   })
 
+  test("getting decimal modulus", () => {
+    expected = 0.4;
+    actual = modulus(2.4, 2);
+    expect(actual).toBeCloseTo(expected);
+  })
+
 });
 
 describe('even', () => {
@@ -121,6 +127,11 @@ test("returns true when given even number", () => {
   test("returns false when given odd number", () => {
     expected = false;
     actual = even(9);
+    expect(actual).toBe(expected);
+  })
+  test("Getting false for decimal number", () => {
+    expected = false;
+    actual = even(2.4);
     expect(actual).toBe(expected);
   })
 });
