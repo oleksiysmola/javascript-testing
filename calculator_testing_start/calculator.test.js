@@ -33,6 +33,11 @@ describe('sum', () => {
     actual = sum(1000, 0);
     expect(actual).toBe(expected);
   });
+  test('can add two decimals', () => {
+    expected = 0.7;
+    actual = sum(0.5, 0.2);
+    expect(actual).toBeCloseTo(expected);
+  });
 
 });
 
@@ -75,6 +80,11 @@ describe('divide', () => {
   test("can divide two negative numbers", () => {
     expected = 500;
     actual = divide(-1000, -2);
+    expect(actual).toBe(expected);
+  })
+  test("can divide by zero", () => {
+    expected = -Infinity;
+    actual = divide(-1000, 0);
     expect(actual).toBe(expected);
   })
 });
