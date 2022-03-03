@@ -17,8 +17,8 @@ describe('sum', () => {
   });
 
   test('can add two large positive numbers', () => { 
-    expected = 1000;
-    actual = sum(500, 500);
+    expected = 1e100;
+    actual = sum(1e100, 0);
     expect(actual).toBe(expected);
   });
 
@@ -100,6 +100,12 @@ describe('modulus', () => {
   test("finding a a non-zero modulus", () => {
     expected = 1;
     actual = modulus(10, 3);
+    expect(actual).toBe(expected);
+  })
+
+  test("dividing by 0", () => {
+    expected = NaN;
+    actual = modulus(10, 0);
     expect(actual).toBe(expected);
   })
 
