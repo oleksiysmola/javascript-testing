@@ -67,11 +67,29 @@ describe('multiply', () => {
 });
 
 describe('divide', () => {
-
+  test("can divide two positive numbers", () => {
+    expected = 500;
+    actual = divide(1000, 2);
+    expect(actual).toBe(expected);
+  })
+  test("can divide two negative numbers", () => {
+    expected = 500;
+    actual = divide(-1000, -2);
+    expect(actual).toBe(expected);
+  })
 });
 
 describe('modulus', () => {
-
+  test("finding the modulus of two positive numbers", () => {
+    expected = 0;
+    actual = modulus(1000, 2);
+    expect(actual).toBe(expected);
+  })
+  test("finding a a non-zero modulus", () => {
+    expected = 1;
+    actual = modulus(10, 3);
+    expect(actual).toBe(expected);
+  })
 });
 
 describe('even', () => {
